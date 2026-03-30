@@ -512,7 +512,6 @@ const Index = () => {
       <section id="advantages" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-10">
-            <div className="text-kolnag-green font-semibold text-sm uppercase tracking-wider mb-3 font-montserrat">О нас</div>
             <h2 className="font-montserrat font-black text-3xl md:text-4xl text-kolnag-dark mb-4">ИП «Кичигин Л.П.»</h2>
             <p className="text-gray-500">Дилер ООО «Колнаг» | Мальта</p>
           </div>
