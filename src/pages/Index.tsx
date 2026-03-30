@@ -271,9 +271,18 @@ const Index = () => {
       {/* HEADER */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-kolnag-dark shadow-md">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
-          <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
-            <img src="https://kolnag.ru/wp-content/uploads/2017/05/logo.png" alt="КОЛНАГ" className="h-10 w-auto" />
-            <div className="text-gray-400 text-xs leading-tight">официальный дистрибьютер</div>
+          <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
+            <img
+              src="https://kolnag.ru/wp-content/uploads/2017/05/logo.png"
+              alt="КОЛНАГ"
+              className="h-8 w-auto"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none";
+                (e.target as HTMLImageElement).nextElementSibling?.classList.remove("hidden");
+              }}
+            />
+            <span className="hidden text-white font-black text-lg font-montserrat">КОЛНАГ</span>
+            <div className="text-gray-400 text-xs leading-tight hidden md:block">официальный дистрибьютер</div>
           </button>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -360,23 +369,23 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <div className="inline-block bg-kolnag-green text-white text-xs font-semibold px-3 py-1 rounded mb-6 font-montserrat tracking-wider uppercase">
+          <div className="inline-block bg-kolnag-green text-white text-xs font-semibold px-3 py-1 rounded mb-4 font-montserrat tracking-wider uppercase">
             Официальный дистрибьютер ООО «Колнаг»
           </div>
-          <h1 className="font-montserrat font-black text-4xl md:text-6xl leading-tight mb-6">
-            Сельскохозяйственная<br />
-            <span className="text-kolnag-green">техника КОЛНАГ</span><br />
+          <h1 className="font-montserrat font-black text-3xl sm:text-4xl md:text-6xl leading-tight mb-4 px-2">
+            Сельскохозяйственная{" "}
+            <span className="text-kolnag-green">техника КОЛНАГ</span>{" "}
             в Иркутской области
           </h1>
-          <p className="text-gray-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-            Обработка почвы, посадка, уборка урожая, заготовка кормов.<br />
+          <p className="text-gray-200 text-base md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed px-2">
+            Обработка почвы, посадка, уборка урожая, заготовка кормов.
             Российское производство. Гарантия завода. Поставка по Сибири.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => scrollTo("catalog")} className="bg-kolnag-green hover:bg-kolnag-greenDark text-white font-semibold px-8 py-4 rounded transition-colors text-lg font-montserrat">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center px-4">
+            <button onClick={() => scrollTo("catalog")} className="bg-kolnag-green hover:bg-kolnag-greenDark text-white font-semibold px-6 py-3 rounded transition-colors text-base font-montserrat w-full sm:w-auto">
               Посмотреть каталог
             </button>
-            <a href="tel:+79950446117" className="border-2 border-white text-white hover:bg-white hover:text-kolnag-dark font-semibold px-8 py-4 rounded transition-colors text-lg font-montserrat">
+            <a href="tel:+79950446117" className="border-2 border-white text-white hover:bg-white hover:text-kolnag-dark font-semibold px-6 py-3 rounded transition-colors text-base font-montserrat w-full sm:w-auto text-center">
               Позвонить нам
             </a>
           </div>
