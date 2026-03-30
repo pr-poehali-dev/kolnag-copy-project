@@ -367,7 +367,7 @@ const Index = () => {
         className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
         style={{ backgroundImage: `url(${HERO_IMG})`, backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/75" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
           <div className="inline-block bg-kolnag-green text-white text-xs font-semibold px-3 py-1 rounded mb-4 font-montserrat tracking-wider uppercase">
             Официальный дистрибьютер ООО «Колнаг»
