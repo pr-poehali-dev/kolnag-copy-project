@@ -272,13 +272,8 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-kolnag-dark shadow-md">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-kolnag-green rounded flex items-center justify-center">
-              <span className="text-white font-black text-lg leading-none">К</span>
-            </div>
-            <div>
-              <div className="text-white font-bold text-base leading-tight font-montserrat">КОЛНАГ</div>
-              <div className="text-gray-400 text-xs leading-tight">официальный дистрибьютер</div>
-            </div>
+            <img src="https://kolnag.ru/wp-content/uploads/2017/05/logo.png" alt="КОЛНАГ" className="h-10 w-auto" />
+            <div className="text-gray-400 text-xs leading-tight">официальный дистрибьютер</div>
           </button>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -669,9 +664,7 @@ const Index = () => {
       <footer className="bg-black py-8">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-kolnag-green rounded flex items-center justify-center">
-              <span className="text-white font-black text-sm">К</span>
-            </div>
+            <img src="https://kolnag.ru/wp-content/uploads/2017/05/logo.png" alt="КОЛНАГ" className="h-8 w-auto" />
             <div>
               <div className="text-white font-bold text-sm font-montserrat">ИП ГКФХ Кичигин Л.П.</div>
               <div className="text-gray-500 text-xs">Официальный дистрибьютер ООО «Колнаг»</div>
