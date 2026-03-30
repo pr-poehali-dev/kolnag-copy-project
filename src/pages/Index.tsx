@@ -53,18 +53,18 @@ const techCategories: Category[] = [
     heroText: "Техника для посадки картофеля",
     products: [
       {
-        id: 101,
-        name: "Картофелесажалка AVR Puma 3-рядная",
-        excerpt: "Трёхрядная картофелесажалка AVR Puma обеспечивает точную посадку картофеля с регулируемым расстоянием между клубнями. Оснащена системой электронного контроля высева.",
-        img: "https://kolnag.ru/wp-content/uploads/2017/05/AVR-Puma-1.jpg",
-        link: "https://kolnag.ru/kartofelesazhalka-avr-puma.html",
+        id: 113,
+        name: "Картофелесажалка AVR CR450M",
+        excerpt: "AVR CR450M — новая четырёхрядная картофелесажалка с механическим приводом от опорных колёс. Выпускается в модификациях 4×75 и 4×90. Бункер вмещает до 3000–3500 кг картофеля.",
+        img: "https://kolnag.ru/wp-content/uploads/2023/05/Kartofelesazhalka-AVR-CR450M-2-1-1.jpg",
+        link: "https://kolnag.ru/kartofelesazhalka-avr-cr450m.html",
       },
       {
-        id: 102,
-        name: "Картофелесажалка AVR Puma 4-рядная",
-        excerpt: "Четырёхрядная картофелесажалка AVR Puma для высокопроизводительной посадки картофеля. Ширина захвата 3,0 м, производительность до 4 га/ч.",
-        img: "https://kolnag.ru/wp-content/uploads/2017/05/AVR-Puma-4-1.jpg",
-        link: "https://kolnag.ru/kartofelesazhalka-avr-puma-4.html",
+        id: 5056,
+        name: "Многофункциональный комплекс на базе картофелесажалки AVR CR450M",
+        excerpt: "Многофункциональный комплекс на базе картофелесажалки AVR CR450M может быть оснащён комплектом опций для одновременной с посадкой картофеля нарезки борозд, внесения удобрений и препаратов химической защиты растений.",
+        img: "https://kolnag.ru/wp-content/uploads/2023/05/Kartofelesazhalka-AVR-CR450M-kompleks-750x430-1.jpg",
+        link: "https://kolnag.ru/mnogofunktsionalnyj-kompleks-avr-cr450m.html",
       },
     ],
   },
@@ -84,7 +84,7 @@ const techCategories: Category[] = [
         id: 156,
         name: "Ботводробитель AVR Rafale",
         excerpt: "Ботводробитель AVR Rafale 4×75 / AVR Rafale 4×90. Некоторые модели картофелеуборочных комбайнов чувствительны к наличию ботвы во время уборки картофеля. Механический способ удаления ботвы наиболее надёжен.",
-        img: "https://kolnag.ru/wp-content/uploads/2017/05/AVR-Rafale-1.jpg",
+        img: "https://kolnag.ru/wp-content/uploads/2017/09/Botvodrobitel-AVR-Rafale-1-1-1.jpg",
         link: "https://kolnag.ru/botvodrobitel-avr-rafale.html",
       },
     ],
@@ -96,15 +96,15 @@ const techCategories: Category[] = [
     products: [
       {
         id: 184,
-        name: "Бункер приемный AVR Falcon",
-        excerpt: "Приемные бункеры AVR Falcon предназначены для загрузки картофеля и корнеплодов, очистки от примесей, сортировки, калибровки и дозированной передачи на линию транспортировки продукции.",
+        name: "Бункер приёмный AVR Falcon",
+        excerpt: "Приёмные бункеры AVR Falcon предназначены для загрузки картофеля и корнеплодов, очистки от примесей, сортировки, калибровки и дозированной передачи на линию транспортировки продукции.",
         img: "https://kolnag.ru/wp-content/uploads/2017/05/AVR-Falcon-1.jpg",
         link: "https://kolnag.ru/bunker-priemnyj-avr-falcon.html",
       },
       {
         id: 178,
         name: "Конвейер ленточный загрузочный AVR CTK",
-        excerpt: "Конвейеры ленточные загрузочные AVR CTK могут использоваться для самых разных транспортировочных целей. Высокая производительность и увеличенная длина делают этот конвейер одинаково удобным для работы в поле и на складе.",
+        excerpt: "Конвейеры ленточные загрузочные AVR CTK могут использоваться для самых разных транспортировочных целей. Высокая производительность и увеличенная длина делают конвейер одинаково удобным для работы в поле и на складе.",
         img: "https://kolnag.ru/wp-content/uploads/2017/05/AVR-CTK-1.jpg",
         link: "https://kolnag.ru/konvejer-lentochnyj-avr-ctk.html",
       },
@@ -118,7 +118,7 @@ const techCategories: Category[] = [
       {
         id: 277,
         name: "Измельчитель кормов Teagle Tomahawk 505M",
-        excerpt: "Измельчитель кормов Teagle Tomahawk 505M предназначен для измельчения сухих кормов (сено, солома), хранимых в тюках. Может измельчать сено и солому для кормовых смесей, а также выдувать измельченную массу для создания подстилки.",
+        excerpt: "Измельчитель кормов Teagle Tomahawk 505M предназначен для измельчения сухих кормов (сено, солома), хранимых в тюках. Может измельчать сено и солому для кормовых смесей, а также выдувать измельчённую массу для создания подстилки.",
         img: "https://kolnag.ru/wp-content/uploads/2017/05/Teagle-Tomahawk-505M-1.jpg",
         link: "https://kolnag.ru/izmelchitel-kormov-teagle-tomahawk-505m.html",
       },
@@ -134,20 +134,83 @@ const techCategories: Category[] = [
   {
     id: "feeding",
     label: "Приготовление и раздача кормов",
-    heroText: "Оборудование для приготовления и раздачи кормов",
+    heroText: "Смесители-кормораздатчики для КРС",
     products: [
+      {
+        id: 197,
+        name: "Смеситель-кормораздатчик Trioliet Solomix 1 10ZK",
+        excerpt: "Trioliet Solomix 1 10ZK — смеситель-кормораздатчик, оснащённый одним вертикальным шнеком и смесительной камерой объёмом 10 м³, предназначен для приготовления и раздачи кормовых смесей.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/09/Trioliet-Solomix-1-10ZK-1-1.jpg",
+        link: "https://kolnag.ru/smesitel-kormorazdatchik-solomix-1-10zk.html",
+      },
+      {
+        id: 200,
+        name: "Смеситель-кормораздатчик Trioliet Solomix 2 1200 ZK New Edition",
+        excerpt: "Смеситель-кормораздатчик Trioliet Solomix 2 1200 ZK New Edition — с двумя вертикальными шнеками и смесительной камерой объёмом 12 м³. Оснащён системой автоматической дозировки компонентов корма.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/09/Trioliet-Solomix-2-1200-ZK-NE-4-2024.jpg",
+        link: "https://kolnag.ru/smesitel-kormorazdatchik-trioliet-solomix-2-12zk.html",
+      },
+      {
+        id: 1771,
+        name: "Смеситель-кормораздатчик Trioliet Solomix 2 1800 ZK New Edition",
+        excerpt: "Trioliet Solomix 2 1800 ZK — смеситель-кормораздатчик с двумя вертикальными шнеками и смесительной камерой объёмом 18 м³, предназначен для хозяйств с большим поголовьем КРС.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/09/Trioliet-Solomix-2-1800ZK-1.jpg",
+        link: "https://kolnag.ru/smesitel-trioliet-solomix-2-18zk.html",
+      },
+      {
+        id: 209,
+        name: "Смеситель-кормораздатчик Trioliet Solomix 2 2400 ZK-T New Edition",
+        excerpt: "Смеситель-кормораздатчик Trioliet Solomix 2 2400 ZK-T с двумя вертикальными шнеками и смесительной камерой объёмом 24 м³ предназначен для приготовления и раздачи кормовой смеси в крупных хозяйствах.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/09/Trioliet-Solomix-2-2400ZK-T-1.jpg",
+        link: "https://kolnag.ru/smesitel-trioliet-solomix-2-24zk-t.html",
+      },
+      {
+        id: 4920,
+        name: "Стационарный смеситель-кормораздатчик Trioliet Solomix 12ZK Stat с электроприводом",
+        excerpt: "Стационарный смеситель с электроприводом на базе самого популярного смесителя-кормораздатчика Trioliet Solomix 2 12ZK разработан на заводе «КОЛНАГ» специально для российских хозяйств.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/09/Trioliet-Solomix-STAT-2.jpg",
+        link: "https://kolnag.ru/statsionarnyj-smesitel-kormorazdatchik-trioliet-solomix-12zk-stat-s-elektroprivodom.html",
+      },
+      {
+        id: 312,
+        name: "Стационарный смеситель кормов Trioliet Solomix STAT",
+        excerpt: "Семейство стационарных смесителей кормов Trioliet Solomix STAT предназначено для хозяйств, где уже организована доставка корма к животным с помощью других технических средств.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/09/Trioliet-Solomix-STAT-2.jpg",
+        link: "https://kolnag.ru/statsionarnye-smesiteli-kormov.html",
+      },
+      {
+        id: 213,
+        name: "Смеситель-кормораздатчик Trioliet Solomix P с выдувателем соломы",
+        excerpt: "Многофункциональный смеситель-кормораздатчик Trioliet Solomix P специально предназначен для повышения эффективности содержания крупного рогатого скота. Оснащён выдувателем соломы для создания подстилки.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/05/Trioliet-Solomix-P-1.jpg",
+        link: "https://kolnag.ru/smesitel-trioliet-solomix-p.html",
+      },
+      {
+        id: 320,
+        name: "Автоматический самоходный робот кормления Triomatic",
+        excerpt: "Автоматическая система для раздачи корма Triomatic предназначена для автоматической подготовки корма и его раздачи. Полностью автономная работа без участия оператора.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/05/Triomatic-1.jpg",
+        link: "https://kolnag.ru/avtomaticheskij-samohodnyj-robot-kormleniya.html",
+      },
+      {
+        id: 322,
+        name: "Система управления кормами TFM Tracker",
+        excerpt: "TFM Tracker — интеллектуальная система управления и распределением корма, которая предоставляет животноводческим хозяйствам полное решение для контроля и оптимизации кормления.",
+        img: "https://kolnag.ru/wp-content/uploads/2017/05/TFM-Tracker-1-1.jpg",
+        link: "https://kolnag.ru/sistema-upravleniya-kormami-tfm-tracker.html",
+      },
       {
         id: 12207,
         name: "Смеситель-кормораздатчик Trioliet Solomix 2 1200 VLL-B New Edition",
-        excerpt: "Смеситель-кормораздатчик Trioliet Solomix 2 1200 VLL-B оснащен двумя усиленными (толщиной 22/25мм) вертикальными шнеками, смесительной камерой объемом 12 м³, одним выгрузным окном с гидроприводом.",
+        excerpt: "Смеситель-кормораздатчик Trioliet Solomix 2 1200 VLL-B оснащён двумя усиленными (толщиной 22/25 мм) вертикальными шнеками, смесительной камерой объёмом 12 м³, одним выгрузным окном с гидроприводом.",
         img: "https://kolnag.ru/wp-content/uploads/2024/11/Kolnag-dlya-spiska-oborudovaniya-1200-VLL-B.jpg",
         link: "https://kolnag.ru/smesitel-kormorazdatchik-trioliet-solomix-2-12vll-b.html",
       },
       {
         id: 12158,
         name: "Смеситель-кормораздатчик Trioliet Solomix 2 1200 VLL-S New Edition",
-        excerpt: "Смеситель-кормораздатчик Solomix 2 1200 VLL-S оснащен двумя усиленными вертикальными шнеками. Модель с боковой выгрузкой, идеально подходит для ферм с ограниченным пространством кормовых проходов.",
-        img: "https://kolnag.ru/wp-content/uploads/2024/11/Kolnag-dlya-spiska-oborudovaniya-1200-VLL-S.jpg",
+        excerpt: "Смеситель-кормораздатчик Solomix 2 1200 VLL-S оснащён двумя усиленными вертикальными шнеками. Модель с боковой выгрузкой, идеально подходит для ферм с ограниченным пространством кормовых проходов.",
+        img: "https://kolnag.ru/wp-content/uploads/2024/11/Kolnag-dlya-spiska-oborudovaniya-1200-VLl-S.jpg",
         link: "https://kolnag.ru/smesitel-kormorazdatchik-trioliet-solomix-2-12vll-s.html",
       },
     ],
@@ -194,8 +257,10 @@ const Index = () => {
     setTechDropdown(false);
     setMobileOpen(false);
     setMobileTechOpen(false);
-    const el = document.getElementById("catalog");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      const el = document.getElementById("catalog");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 50);
   };
 
   const currentCat = techCategories.find((c) => c.id === activeCategoryId)!;
@@ -230,7 +295,7 @@ const Index = () => {
                 <Icon name="ChevronDown" size={14} className={`transition-transform duration-200 ${techDropdown ? "rotate-180" : ""}`} />
               </button>
               {techDropdown && (
-                <div className="absolute top-full left-0 mt-2 bg-white shadow-xl rounded border border-gray-100 min-w-[260px] z-50 py-1">
+                <div className="absolute top-full left-0 mt-2 bg-white shadow-xl rounded border border-gray-100 min-w-[280px] z-50 py-1">
                   {techCategories.map((cat) => (
                     <button
                       key={cat.id}
@@ -399,7 +464,7 @@ const Index = () => {
           </div>
 
           {/* Products grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {currentCat.products.map((p, idx) => (
               <button
                 key={p.id}
@@ -414,7 +479,7 @@ const Index = () => {
                   <img
                     src={p.img}
                     alt={p.name}
-                    className="w-16 h-12 object-cover rounded shrink-0"
+                    className="w-16 h-12 object-cover rounded shrink-0 bg-gray-100"
                     onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
                   />
                   <div className="font-montserrat font-semibold text-sm text-kolnag-dark leading-snug">{p.name}</div>
