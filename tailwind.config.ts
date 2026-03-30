@@ -18,8 +18,17 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			montserrat: ['Montserrat', 'sans-serif'],
+			sans: ['Open Sans', 'sans-serif'],
+		},
 		extend: {
 			colors: {
+				kolnag: {
+					green: '#3a7d1e',
+					greenDark: '#2d6116',
+					dark: '#1a2333',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
