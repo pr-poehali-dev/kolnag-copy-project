@@ -308,7 +308,7 @@ const Index = () => {
               )}
             </div>
             <button onClick={() => scrollTo("advantages")} className="text-gray-300 hover:text-kolnag-green transition-colors text-sm font-medium font-montserrat">
-              Преимущества
+              О нас
             </button>
             <button onClick={() => scrollTo("contacts")} className="text-gray-300 hover:text-kolnag-green transition-colors text-sm font-medium font-montserrat">
               Контакты
@@ -348,7 +348,7 @@ const Index = () => {
                 </div>
               )}
             </div>
-            <button onClick={() => scrollTo("advantages")} className="text-gray-300 hover:text-kolnag-green text-left text-sm font-medium py-2.5 border-b border-gray-700">Преимущества</button>
+            <button onClick={() => scrollTo("advantages")} className="text-gray-300 hover:text-kolnag-green text-left text-sm font-medium py-2.5 border-b border-gray-700">О нас</button>
             <button onClick={() => scrollTo("contacts")} className="text-gray-300 hover:text-kolnag-green text-left text-sm font-medium py-2.5 border-b border-gray-700">Контакты</button>
             <a href="tel:+79950446117" className="flex items-center justify-center gap-2 bg-kolnag-green text-white px-4 py-3 rounded font-semibold text-sm mt-3">
               <Icon name="Phone" size={14} />+7 (995) 044-61-17
