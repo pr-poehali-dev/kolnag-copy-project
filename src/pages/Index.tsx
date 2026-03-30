@@ -217,13 +217,11 @@ const techCategories: Category[] = [
   },
 ];
 
-const advantages = [
-  { icon: "Factory", title: "Собственное производство", text: "Вся техника производится на заводе ООО «Колнаг» в России с использованием качественных комплектующих." },
-  { icon: "Wrench", title: "Гарантия и сервис", text: "Гарантийное и постгарантийное обслуживание. Наличие запасных частей на складе." },
-  { icon: "TrendingUp", title: "Надёжность", text: "Техника прошла испытания в различных климатических зонах России, включая Сибирь и Дальний Восток." },
-  { icon: "Handshake", title: "Официальный дистрибьютер", text: "ИП ГКФХ Кичигин Л.П. — официальный дистрибьютер ООО «Колнаг» в Иркутской области." },
-  { icon: "PackageCheck", title: "Наличие техники", text: "Широкий ассортимент техники в наличии. Возможна поставка под заказ в короткие сроки." },
-  { icon: "CreditCard", title: "Лизинг и рассрочка", text: "Возможность приобретения техники в лизинг через ведущие лизинговые компании России." },
+const aboutPoints = [
+  "Один из крупнейших производителей овощей Иркутской области: картофель, морковь, лук, свёкла, редька, капуста. Наши объёмы производства таковы, что работаем по Восточной Сибири и Дальнему Востоку, и даже на экспорт в Монголию.",
+  "ИП «Кичигин Л.П.» — стремительно развивающееся хозяйство, активно внедряющее агротехнологии в свою работу, и это во многом благодаря использованию техники «Колнаг».",
+  "Наше предприятие — это не тот партнёр, который всеми правдами и неправдами будет «втюхивать» позиции по каталогу. Напротив, на нашем примере, воочию, можно убедиться в возможностях той техники, которую вы планируете купить.",
+  "На базе предприятия ИП «Кичигин Л.П.» работает инженерная служба по вводу в эксплуатацию и обслуживанию техники «Колнаг».",
 ];
 
 const Index = () => {
@@ -232,6 +230,7 @@ const Index = () => {
   const [mobileTechOpen, setMobileTechOpen] = useState(false);
   const [activeCategoryId, setActiveCategoryId] = useState("soil");
   const [activeProductIdx, setActiveProductIdx] = useState(0);
+  const [modalProduct, setModalProduct] = useState<Product | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -450,6 +449,13 @@ const Index = () => {
                   <Icon name="Phone" size={16} />
                   Узнать цену
                 </a>
+                <button
+                  onClick={() => setModalProduct(currentProduct)}
+                  className="inline-flex items-center justify-center gap-2 border border-kolnag-green text-kolnag-green font-medium px-6 py-3 rounded hover:bg-kolnag-green hover:text-white transition-colors font-montserrat text-sm"
+                >
+                  <Icon name="Info" size={14} />
+                  Подробнее о товаре
+                </button>
                 <a
                   href={currentProduct.link}
                   target="_blank"
@@ -457,7 +463,7 @@ const Index = () => {
                   className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-600 font-medium px-6 py-3 rounded hover:border-kolnag-green hover:text-kolnag-green transition-colors font-montserrat text-sm"
                 >
                   <Icon name="ExternalLink" size={14} />
-                  Подробнее на kolnag.ru
+                  На сайте kolnag.ru
                 </a>
               </div>
             </div>
@@ -466,51 +472,132 @@ const Index = () => {
           {/* Products grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {currentCat.products.map((p, idx) => (
-              <button
+              <div
                 key={p.id}
-                onClick={() => setActiveProductIdx(idx)}
-                className={`text-left rounded-xl border p-4 transition-all ${
+                className={`rounded-xl border transition-all ${
                   activeProductIdx === idx
                     ? "border-kolnag-green bg-kolnag-green/5 shadow-sm"
                     : "border-gray-100 bg-white hover:border-kolnag-green/50 hover:shadow-sm"
                 }`}
               >
-                <div className="flex items-start gap-3">
-                  <img
-                    src={p.img}
-                    alt={p.name}
-                    className="w-16 h-12 object-cover rounded shrink-0 bg-gray-100"
-                    onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
-                  />
-                  <div className="font-montserrat font-semibold text-sm text-kolnag-dark leading-snug">{p.name}</div>
+                <button
+                  onClick={() => setActiveProductIdx(idx)}
+                  className="w-full text-left p-4"
+                >
+                  <div className="flex items-start gap-3">
+                    <img
+                      src={p.img}
+                      alt={p.name}
+                      className="w-16 h-12 object-cover rounded shrink-0 bg-gray-100"
+                      onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
+                    />
+                    <div className="font-montserrat font-semibold text-sm text-kolnag-dark leading-snug">{p.name}</div>
+                  </div>
+                </button>
+                <div className="px-4 pb-3">
+                  <button
+                    onClick={() => setModalProduct(p)}
+                    className="w-full text-xs text-kolnag-green font-medium font-montserrat border border-kolnag-green/30 rounded py-1.5 hover:bg-kolnag-green hover:text-white transition-colors"
+                  >
+                    Подробнее
+                  </button>
                 </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ADVANTAGES */}
-      <section id="advantages" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="text-kolnag-green font-semibold text-sm uppercase tracking-wider mb-3 font-montserrat">Почему мы</div>
-            <h2 className="font-montserrat font-black text-3xl md:text-4xl text-kolnag-dark mb-4">Наши преимущества</h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">Мы предлагаем только качественную технику с полным сервисным сопровождением</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {advantages.map((adv) => (
-              <div key={adv.title} className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-kolnag-green/30 hover:shadow-md transition-all group">
-                <div className="w-12 h-12 bg-kolnag-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-kolnag-green/20 transition-colors">
-                  <Icon name={adv.icon} size={24} className="text-kolnag-green" />
-                </div>
-                <h3 className="font-montserrat font-bold text-lg text-kolnag-dark mb-2">{adv.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{adv.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* ABOUT */}
+      <section id="advantages" className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <div className="text-kolnag-green font-semibold text-sm uppercase tracking-wider mb-3 font-montserrat">О нас</div>
+            <h2 className="font-montserrat font-black text-3xl md:text-4xl text-kolnag-dark mb-4">ИП «Кичигин Л.П.»</h2>
+            <p className="text-gray-500">Дилер ООО «Колнаг» | Мальта</p>
+          </div>
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100">
+            <div className="text-kolnag-dark font-semibold text-base mb-6 font-montserrat">Кто мы?</div>
+            <div className="flex flex-col gap-5">
+              {aboutPoints.map((point, i) => (
+                <div key={i} className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-kolnag-green mt-2 shrink-0" />
+                  <p className="text-gray-700 leading-relaxed">{point}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 mt-10">
+              <button
+                onClick={() => scrollTo("catalog")}
+                className="flex-1 border-2 border-kolnag-green text-kolnag-green font-semibold px-6 py-3 rounded hover:bg-kolnag-green hover:text-white transition-colors font-montserrat text-center"
+              >
+                В каталог / на главную
+              </button>
+              <a
+                href="tel:+79950446117"
+                className="flex-1 bg-kolnag-green text-white font-semibold px-6 py-3 rounded hover:bg-kolnag-greenDark transition-colors font-montserrat text-center"
+              >
+                Позвонить
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCT MODAL */}
+      {modalProduct && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4"
+          onClick={() => setModalProduct(null)}
+        >
+          <div
+            className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative">
+              <img
+                src={modalProduct.img}
+                alt={modalProduct.name}
+                className="w-full h-64 object-cover rounded-t-2xl bg-gray-100"
+                onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
+              />
+              <button
+                onClick={() => setModalProduct(null)}
+                className="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors"
+              >
+                <Icon name="X" size={18} className="text-gray-700" />
+              </button>
+            </div>
+            <div className="p-8">
+              <div className="inline-block bg-kolnag-green/10 text-kolnag-green text-xs font-semibold px-2 py-1 rounded mb-3 font-montserrat">
+                {techCategories.find(c => c.products.some(p => p.id === modalProduct.id))?.label}
+              </div>
+              <h2 className="font-montserrat font-black text-2xl text-kolnag-dark mb-4 leading-tight">
+                {modalProduct.name}
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-8">{modalProduct.excerpt}</p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="tel:+79950446117"
+                  className="flex-1 flex items-center justify-center gap-2 bg-kolnag-green text-white font-semibold px-6 py-3 rounded hover:bg-kolnag-greenDark transition-colors font-montserrat"
+                >
+                  <Icon name="Phone" size={16} />
+                  Узнать цену
+                </a>
+                <a
+                  href={modalProduct.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 border border-gray-200 text-gray-600 font-medium px-6 py-3 rounded hover:border-kolnag-green hover:text-kolnag-green transition-colors font-montserrat text-sm"
+                >
+                  <Icon name="ExternalLink" size={14} />
+                  Подробнее на kolnag.ru
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CONTACTS */}
       <section id="contacts" className="py-20 bg-kolnag-dark">
