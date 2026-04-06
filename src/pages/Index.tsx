@@ -319,9 +319,9 @@ const Index = () => {
             </button>
           </nav>
 
-          <a href="tel:+79950446117" className="hidden md:flex items-center gap-2 bg-kolnag-green text-white px-4 py-2 rounded font-semibold text-sm hover:bg-kolnag-greenDark transition-colors">
+          <a href="tel:+79027612686" className="hidden md:flex items-center gap-2 bg-kolnag-green text-white px-4 py-2 rounded font-semibold text-sm hover:bg-kolnag-greenDark transition-colors">
             <Icon name="Phone" size={14} />
-            +7 (995) 044-61-17
+            +7 (902) 761-26-86
           </a>
 
           <button className="md:hidden text-white p-2" onClick={() => setMobileOpen(!mobileOpen)}>
@@ -354,8 +354,8 @@ const Index = () => {
             </div>
             <button onClick={() => scrollTo("advantages")} className="text-gray-300 hover:text-kolnag-green text-left text-sm font-medium py-2.5 border-b border-gray-700">О нас</button>
             <button onClick={() => scrollTo("contacts")} className="text-gray-300 hover:text-kolnag-green text-left text-sm font-medium py-2.5 border-b border-gray-700">Контакты</button>
-            <a href="tel:+79950446117" className="flex items-center justify-center gap-2 bg-kolnag-green text-white px-4 py-3 rounded font-semibold text-sm mt-3">
-              <Icon name="Phone" size={14} />+7 (995) 044-61-17
+            <a href="tel:+79027612686" className="flex items-center justify-center gap-2 bg-kolnag-green text-white px-4 py-3 rounded font-semibold text-sm mt-3">
+              <Icon name="Phone" size={14} />+7 (902) 761-26-86
             </a>
           </div>
         )}
@@ -385,7 +385,7 @@ const Index = () => {
             <button onClick={() => scrollTo("catalog")} className="bg-kolnag-green hover:bg-kolnag-greenDark text-white font-semibold px-6 py-3 rounded transition-colors text-base font-montserrat w-full sm:w-auto">
               Посмотреть каталог
             </button>
-            <a href="tel:+79950446117" className="border-2 border-white text-white hover:bg-white hover:text-kolnag-dark font-semibold px-6 py-3 rounded transition-colors text-base font-montserrat w-full sm:w-auto text-center">
+            <a href="tel:+79027612686" className="border-2 border-white text-white hover:bg-white hover:text-kolnag-dark font-semibold px-6 py-3 rounded transition-colors text-base font-montserrat w-full sm:w-auto text-center">
               Позвонить нам
             </a>
           </div>
@@ -447,7 +447,7 @@ const Index = () => {
               </div>
               <div className="flex flex-col gap-3">
                 <a
-                  href="tel:+79950446117"
+                  href="tel:+79027612686"
                   className="inline-flex items-center justify-center gap-2 bg-kolnag-green text-white font-semibold px-6 py-3 rounded hover:bg-kolnag-greenDark transition-colors font-montserrat"
                 >
                   <Icon name="Phone" size={16} />
@@ -537,7 +537,7 @@ const Index = () => {
                 В каталог / на главную
               </button>
               <a
-                href="tel:+79950446117"
+                href="tel:+79027612686"
                 className="flex-1 bg-kolnag-green text-white font-semibold px-6 py-3 rounded hover:bg-kolnag-greenDark transition-colors font-montserrat text-center"
               >
                 Позвонить
@@ -581,7 +581,7 @@ const Index = () => {
               <p className="text-gray-600 leading-relaxed mb-8">{modalProduct.excerpt}</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="tel:+79950446117"
+                  href="tel:+79027612686"
                   className="flex-1 flex items-center justify-center gap-2 bg-kolnag-green text-white font-semibold px-6 py-3 rounded hover:bg-kolnag-greenDark transition-colors font-montserrat"
                 >
                   <Icon name="Phone" size={16} />
@@ -618,8 +618,8 @@ const Index = () => {
                 </div>
                 <div>
                   <div className="text-gray-400 text-sm mb-1">Телефон для звонков</div>
-                  <a href="tel:+79950446117" className="text-white text-xl font-bold font-montserrat hover:text-kolnag-green transition-colors">
-                    +7 (995) 044-61-17
+                  <a href="tel:+79027612686" className="text-white text-xl font-bold font-montserrat hover:text-kolnag-green transition-colors">
+                    +7 (902) 761-26-86
                   </a>
                 </div>
               </div>
@@ -629,8 +629,8 @@ const Index = () => {
                 </div>
                 <div>
                   <div className="text-gray-400 text-sm mb-1">Электронная почта</div>
-                  <a href="mailto:maltaovoshi@gmail.com" className="text-white text-lg font-semibold font-montserrat hover:text-kolnag-green transition-colors">
-                    maltaovoshi@gmail.com
+                  <a href="mailto:kichigina.1975@mail.ru" className="text-white text-lg font-semibold font-montserrat hover:text-kolnag-green transition-colors">
+                    kichigina.1975@mail.ru
                   </a>
                 </div>
               </div>
@@ -648,7 +648,7 @@ const Index = () => {
                 </div>
               </div>
               <a
-                href="tel:+79950446117"
+                href="tel:+79027612686"
                 className="mt-2 flex items-center justify-center gap-3 bg-kolnag-green hover:bg-kolnag-greenDark text-white font-bold px-8 py-4 rounded-xl transition-colors font-montserrat text-lg"
               >
                 <Icon name="Phone" size={20} />
