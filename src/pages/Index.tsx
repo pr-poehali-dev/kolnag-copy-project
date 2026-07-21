@@ -354,20 +354,6 @@ const techCategories: Category[] = [
         link: "https://kolnag.ru/statsionarnye-smesiteli-kormov.html",
       },
       {
-        id: 43,
-        name: "Смеситель-кормораздатчик Trioliet Solomix P с выдувателем соломы",
-        excerpt: "Многофункциональный смеситель-кормораздатчик Trioliet Solomix P специально предназначен для повышения эффективности содержания крупного рогатого скота на глубокой подстилке.",
-        img: "https://kolnag.ru/wp-content/uploads/2017/09/Trioliet-Solomix-P-1.jpg",
-        link: "https://kolnag.ru/smesitel-trioliet-solomix-p.html",
-      },
-      {
-        id: 44,
-        name: "Автоматический самоходный робот кормления Triomatic",
-        excerpt: "Автоматическая система для раздачи корма предназначен для автоматической подготовки корма и его раздачи. С помощью этой системы можно организовать более частое кормление животных, что увеличивает потребление корма и повышает продуктивность.",
-        img: "https://kolnag.ru/wp-content/uploads/2017/09/Triomatic-1.jpg",
-        link: "https://kolnag.ru/avtomaticheskij-samohodnyj-robot-kormleniya.html",
-      },
-      {
         id: 45,
         name: "Система управления кормами TFM Tracker",
         excerpt: "TFM Tracker - система управления кормами, которая предоставляет животноводческим хозяйствам полное решение для управления расходами на корма, повышения эффективности и улучшения производства.",
