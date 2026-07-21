@@ -594,12 +594,12 @@ const Index = () => {
 
           {/* Active product card */}
           <div className="grid md:grid-cols-2 gap-0 bg-white rounded-2xl shadow-sm overflow-hidden mb-6">
-            <div className="overflow-hidden bg-gray-100 flex items-center justify-center">
+            <div className="overflow-hidden bg-gray-100 flex items-center justify-center p-4 min-h-[288px] md:h-auto">
               <img
                 key={currentProduct.id}
                 src={currentProduct.img}
                 alt={currentProduct.name}
-                className="w-full h-72 md:h-full object-contain"
+                className="w-full h-64 sm:h-72 md:h-full max-h-full object-contain"
                 onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
               />
             </div>
@@ -726,12 +726,14 @@ const Index = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
-              <img
-                src={modalProduct.img}
-                alt={modalProduct.name}
-                className="w-full h-64 object-contain rounded-t-2xl bg-gray-100"
-                onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
-              />
+              <div className="w-full h-64 flex items-center justify-center p-4 rounded-t-2xl bg-gray-100">
+                <img
+                  src={modalProduct.img}
+                  alt={modalProduct.name}
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
+                />
+              </div>
               <button
                 onClick={() => setModalProduct(null)}
                 className="absolute top-4 right-4 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors"
