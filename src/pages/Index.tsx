@@ -217,15 +217,6 @@ const techCategories: Category[] = [
   },
 ];
 
-const categoryIcons: Record<string, string> = {
-  soil: "Tractor",
-  potato: "Sprout",
-  harvest: "Wheat",
-  storage: "Warehouse",
-  fodder: "Scissors",
-  feeding: "UtensilsCrossed",
-};
-
 const aboutPoints = [
   "Один из крупнейших производителей овощей Иркутской области: картофель, морковь, лук, свёкла, редька, капуста. Наши объёмы производства таковы, что работаем по Восточной Сибири и Дальнему Востоку, и даже на экспорт в Монголию.",
   "ИП «Кичигин Л.П.» — стремительно развивающееся хозяйство, активно внедряющее агротехнологии в свою работу, и это во многом благодаря использованию техники «Колнаг».",
@@ -405,42 +396,36 @@ const Index = () => {
       </section>
 
       {/* CATALOG */}
-      <section id="catalog" className="py-20 bg-white">
+      <section id="catalog" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-end mb-14">
-            <span className="bg-kolnag-green text-white font-montserrat font-medium uppercase text-2xl md:text-4xl text-center px-6 py-4 md:px-10 md:py-6">
-              Наша техника
-            </span>
+          <div className="text-center mb-10">
+            <div className="text-kolnag-green font-semibold text-sm uppercase tracking-wider mb-3 font-montserrat">Наша продукция</div>
+            <h2 className="font-montserrat font-black text-3xl md:text-4xl text-kolnag-dark mb-4">Каталог техники</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">Полный ассортимент сельскохозяйственной техники ООО «Колнаг»</p>
           </div>
 
           {/* Category tabs */}
-          <div className="flex flex-wrap justify-center items-stretch gap-6 mb-14">
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
             {techCategories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => { setActiveCategoryId(cat.id); setActiveProductIdx(0); }}
-                style={{
-                  background: activeCategoryId === cat.id
-                    ? "linear-gradient(244.18deg, #0f6b2c 50.22%, #ffffff 50.22%)"
-                    : "linear-gradient(244.18deg, #158E3C 50.22%, #ffffff 50.22%)",
-                }}
-                className="flex flex-col items-center justify-center gap-3 w-[220px] h-[170px] px-6 py-4 shadow-sm hover:shadow-md transition-shadow"
+                className={`px-4 py-2 rounded text-sm font-medium font-montserrat transition-colors ${
+                  activeCategoryId === cat.id
+                    ? "bg-kolnag-green text-white"
+                    : "bg-white text-gray-600 border border-gray-200 hover:border-kolnag-green hover:text-kolnag-green"
+                }`}
               >
-                <Icon name={categoryIcons[cat.id] || "Wrench"} size={40} className="text-white drop-shadow" />
-                <span className="font-montserrat font-medium text-sm uppercase text-center text-black leading-tight">
-                  {cat.label}
-                </span>
+                {cat.label}
               </button>
             ))}
           </div>
 
           {/* Category title */}
-          <div className="bg-kolnag-green inline-block px-6 py-3 mb-6">
-            <h3 className="font-montserrat font-medium text-lg md:text-xl text-white uppercase">{currentCat.heroText}</h3>
-          </div>
+          <h3 className="font-montserrat font-black text-xl text-kolnag-dark mb-6">{currentCat.heroText}</h3>
 
           {/* Active product card */}
-          <div className="grid md:grid-cols-2 gap-0 bg-white shadow-sm overflow-hidden mb-6 border border-gray-100">
+          <div className="grid md:grid-cols-2 gap-0 bg-white rounded-2xl shadow-sm overflow-hidden mb-6">
             <div className="overflow-hidden bg-gray-100">
               <img
                 key={currentProduct.id}
@@ -452,7 +437,7 @@ const Index = () => {
             </div>
             <div className="p-8 flex flex-col justify-between">
               <div>
-                <div className="inline-block bg-kolnag-green text-white text-xs font-semibold px-3 py-1 mb-3 font-montserrat uppercase">
+                <div className="inline-block bg-kolnag-green/10 text-kolnag-green text-xs font-semibold px-2 py-1 rounded mb-3 font-montserrat">
                   {currentCat.label}
                 </div>
                 <h3 className="font-montserrat font-black text-xl md:text-2xl text-kolnag-dark mb-4 leading-tight">
@@ -463,14 +448,14 @@ const Index = () => {
               <div className="flex flex-col gap-3">
                 <a
                   href="tel:+79027612686"
-                  className="inline-flex items-center justify-center gap-2 bg-kolnag-green text-white font-semibold px-6 py-3 hover:bg-kolnag-greenDark transition-colors font-montserrat"
+                  className="inline-flex items-center justify-center gap-2 bg-kolnag-green text-white font-semibold px-6 py-3 rounded hover:bg-kolnag-greenDark transition-colors font-montserrat"
                 >
                   <Icon name="Phone" size={16} />
                   Узнать цену
                 </a>
                 <button
                   onClick={() => setModalProduct(currentProduct)}
-                  className="inline-flex items-center justify-center gap-2 border border-kolnag-green text-kolnag-green font-medium px-6 py-3 hover:bg-kolnag-green hover:text-white transition-colors font-montserrat text-sm"
+                  className="inline-flex items-center justify-center gap-2 border border-kolnag-green text-kolnag-green font-medium px-6 py-3 rounded hover:bg-kolnag-green hover:text-white transition-colors font-montserrat text-sm"
                 >
                   <Icon name="Info" size={14} />
                   Подробнее о товаре
@@ -479,7 +464,7 @@ const Index = () => {
                   href={currentProduct.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-600 font-medium px-6 py-3 hover:border-kolnag-green hover:text-kolnag-green transition-colors font-montserrat text-sm"
+                  className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-600 font-medium px-6 py-3 rounded hover:border-kolnag-green hover:text-kolnag-green transition-colors font-montserrat text-sm"
                 >
                   <Icon name="ExternalLink" size={14} />
                   На сайте kolnag.ru
@@ -493,7 +478,7 @@ const Index = () => {
             {currentCat.products.map((p, idx) => (
               <div
                 key={p.id}
-                className={`border transition-all ${
+                className={`rounded-xl border transition-all ${
                   activeProductIdx === idx
                     ? "border-kolnag-green bg-kolnag-green/5 shadow-sm"
                     : "border-gray-100 bg-white hover:border-kolnag-green/50 hover:shadow-sm"
@@ -507,7 +492,7 @@ const Index = () => {
                     <img
                       src={p.img}
                       alt={p.name}
-                      className="w-16 h-12 object-cover shrink-0 bg-gray-100"
+                      className="w-16 h-12 object-cover rounded shrink-0 bg-gray-100"
                       onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
                     />
                     <div className="font-montserrat font-semibold text-sm text-kolnag-dark leading-snug">{p.name}</div>
@@ -516,7 +501,7 @@ const Index = () => {
                 <div className="px-4 pb-3">
                   <button
                     onClick={() => setModalProduct(p)}
-                    className="w-full text-xs text-kolnag-green font-medium font-montserrat border border-kolnag-green/30 py-1.5 hover:bg-kolnag-green hover:text-white transition-colors"
+                    className="w-full text-xs text-kolnag-green font-medium font-montserrat border border-kolnag-green/30 rounded py-1.5 hover:bg-kolnag-green hover:text-white transition-colors"
                   >
                     Подробнее
                   </button>
