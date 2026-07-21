@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/b8f51606-6353-4880-b932-e8c85184bdfa/files/38c957c6-4aee-4fee-8725-df2a7c22f78d.jpg";
+const HERO_IMG = "/hero-kolnag.jpg";
 
 interface Product {
   id: number;
