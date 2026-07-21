@@ -589,9 +589,6 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Category title */}
-          <h3 className="font-montserrat font-black text-xl text-kolnag-dark mb-6">{currentCat.heroText}</h3>
-
           {/* Active product card */}
           <div className="grid md:grid-cols-2 gap-0 bg-white rounded-2xl shadow-sm overflow-hidden mb-6">
             <div className="bg-gray-100 flex items-center justify-center p-4 aspect-[4/3] md:aspect-auto md:h-auto">
