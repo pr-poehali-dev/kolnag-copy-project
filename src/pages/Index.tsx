@@ -594,12 +594,12 @@ const Index = () => {
 
           {/* Active product card */}
           <div className="grid md:grid-cols-2 gap-0 bg-white rounded-2xl shadow-sm overflow-hidden mb-6">
-            <div className="overflow-hidden bg-gray-100">
+            <div className="overflow-hidden bg-gray-100 flex items-center justify-center">
               <img
                 key={currentProduct.id}
                 src={currentProduct.img}
                 alt={currentProduct.name}
-                className="w-full h-72 md:h-full object-cover"
+                className="w-full h-72 md:h-full object-contain"
                 onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
               />
             </div>
@@ -660,7 +660,7 @@ const Index = () => {
                     <img
                       src={p.img}
                       alt={p.name}
-                      className="w-16 h-12 object-cover rounded shrink-0 bg-gray-100"
+                      className="w-16 h-12 object-contain rounded shrink-0 bg-gray-100"
                       onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
                     />
                     <div className="font-montserrat font-semibold text-sm text-kolnag-dark leading-snug">{p.name}</div>
@@ -729,7 +729,7 @@ const Index = () => {
               <img
                 src={modalProduct.img}
                 alt={modalProduct.name}
-                className="w-full h-64 object-cover rounded-t-2xl bg-gray-100"
+                className="w-full h-64 object-contain rounded-t-2xl bg-gray-100"
                 onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMG; }}
               />
               <button
