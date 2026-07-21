@@ -25,8 +25,8 @@ export default {
 		extend: {
 			colors: {
 				kolnag: {
-					green: '#3a7d1e',
-					greenDark: '#2d6116',
+					green: '#158E3C',
+					greenDark: '#0f6b2c',
 					dark: '#1a2333',
 				},
 				border: 'hsl(var(--border))',
